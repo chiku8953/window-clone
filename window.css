@@ -4,8 +4,7 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
-  color:#cccccc;
- 
+  color:#cccccc; 
 }
 body{
   font-family:verdana;
@@ -15,12 +14,10 @@ body{
   overflow-y: auto;
  overflow-x:hidden;
 }
-
 /* We don't want any links to be underlined. Let's remove that globally */
 a {
   text-decoration: none;
 }
-
 .navbar {
   background-color:#B3E5FC;
   display: flex;
@@ -29,14 +26,11 @@ a {
   align-items: center;
   height:40px;  
 }
-
-
 /* We want all links in the navbar to be #e7e7e7 */
 .navbar a {
   color: #e7e7e7;
   font-size:16px;
 }
-
 .navbar ul {
  /* Let's reset the margin and padding of the list so it's is flush. */
   margin: 0;
@@ -47,7 +41,6 @@ a {
   display: flex;
   align-items:center;
 }
-
 .navbar .brand {
   /*Let's make the anchor display block.
      This will ensure when we get the full width of the container.
@@ -59,7 +52,6 @@ a {
   font-size:20px;
   margin:0;
 }
-
 .navbar ul li a {
   color: #e7e7e7;
   padding: 0px;
@@ -70,27 +62,23 @@ a {
   */
   display: block;
 }
-
 /* When a user hovers, focuses or if the link is active change the background */
 .navbar ul a:hover,
 .navbar ul a:focus,
 .navbar ul .active {
   background-color: #272727;
 }
-
         .container {
             position: relative;
             display: inline-block;
             text-align: center;
             width:100%;
         }
-
         .image {
             display: block;
             width: 100%;
             height:710px;
         }
-
         .chrome {
             position: absolute;
             top:50px;
@@ -100,10 +88,7 @@ a {
             font-size: 24px;
             font-weight: bold;
             
-        }
-
-        
-        
+        }             
                 .internet {
             position: absolute;
             top:50px;
@@ -111,12 +96,10 @@ a {
             transform: translate(-50%, -50%);
             color: white;
             font-size: 24px;
-            font-weight: bold;
-            
+            font-weight: bold;            
         }
         
-        
-                .youtube {
+             .youtube {
             position: absolute;
             top:150px;
             left: 50px;     
@@ -125,10 +108,7 @@ a {
             font-size: 24px;
             font-weight: bold;
             
-        }
-        
-        
-        
+        }                        
                 .file {
             position: absolute;
             top:250px;
@@ -136,12 +116,8 @@ a {
             transform: translate(-50%, -50%);
             color: white;
             font-size: 24px;
-            font-weight: bold;
-            
-        }
-        
-        
-        
+            font-weight: bold;            
+        }                        
               .rc{
             position: absolute;
             top:150px;
@@ -149,10 +125,8 @@ a {
             transform: translate(-50%, -50%);
             color: white;
             font-size: 24px;
-            font-weight: bold;
-            
-        }       
-        
+            font-weight: bold;            
+        }               
         .excel {
             position: absolute;
             top:250px;
@@ -160,12 +134,8 @@ a {
             transform: translate(-50%, -50%);
             color: white;
             font-size: 24px;
-            font-weight: bold;
-            
-        }
-        
-        
-        
+            font-weight: bold;            
+        }                        
                 .chatgpt {
             position: absolute;
             top:350px;
@@ -173,8 +143,7 @@ a {
             transform: translate(-50%, -50%);
             color: white;
             font-size: 24px;
-            font-weight: bold;
-            
+            font-weight: bold;            
         }      
                 .notpad {
             position: absolute;
@@ -183,11 +152,9 @@ a {
             transform: translate(-50%, -50%);
             color: white;
             font-size: 24px;
-            font-weight: bold;
-            
+            font-weight: bold;            
         }
-        
-                .notpad {
+              .notpad {
             position: absolute;
             top:350px;
             left:150px;
@@ -195,10 +162,8 @@ a {
             transform: translate(-50%, -50%);
             color: white;
             font-size: 24px;
-            font-weight: bold;
-            
-        }
-        
+            font-weight: bold;            
+        }        
               .typing {
             position: absolute;
             top:450px;
@@ -207,10 +172,8 @@ a {
             transform: translate(-50%, -50%);
             color: white;
             font-size: 24px;
-            font-weight: bold;
-            
-        }
-        
+            font-weight: bold;            
+        }        
                 .github {
             position: absolute;
             top:450px;
@@ -218,61 +181,45 @@ a {
             transform: translate(-50%, -50%);
             color: white;
             font-size: 24px;
-            font-weight: bold;
-            
-        }
-        
+            font-weight: bold;            
+        }        
         .g{
           text-align:left;
           margin:60px;
-        }
-        
+        }        
         .taskbar{
           padding:0;
           margin:0;
           width:100%;
           background-color:blue;
           height:30px;                              
-        }
-        
+        }        
         .img{
           height:37px;
           width:37px;
           text-align:left; 
-          margin:2px;
-          
-          
+          margin:2px;                    
         }
-        .logo{
-          
+        .logo{          
           text-align:left;                              
         }
         .img2{
           height:20px;
           width:20px;
           text-align:right;
-        }
-        
+        }        
         .uper{
           height:40px;
           width:155px;
-          text-align:right;
-          
-          
-        }
-        
-        
-        
-       .home{
-         
+          text-align:right;                    
+        }                        
+       .home{         
          margin:0;
-        padding:0;
-         
+         padding:0;         
        } 
        .h{
          text-align:right;
-         margin:4px
-         
+         margin:4px         
        }
        .hg{
          border:px solid ;
@@ -282,8 +229,7 @@ a {
           height:65px;
           width:65px;
           margin:10px;
-          text-align: uper left;
-          
+          text-align: uper left;          
         }
         #clock-time{
           text-align:right;
@@ -293,14 +239,11 @@ a {
                .space{
          height:100px;
          
-       }
-   
+       }   
    .start{
-     border:1px solid white;
-     
+     border:1px solid white;     
      height:1100px;
-     width:330px;
-     
+     width:330px;     
      background-color:white;
      color:black;
    }
@@ -308,41 +251,31 @@ a {
      color:black;
      align-items:center;
      font-size:40px;
-   }
-   
+   }   
      .flex{
     display:flex;
     width:48px;
     margin:8px;
     padding:5px;
     border:1px solid white;
-    border-radius:5px;
-   
-     }
-   
-   
-   
-  
+    border-radius:5px;   
+     }           
  .t{
   height:40px;
   background-color:#B3E5FC;
   text-align: right;
-}
-  
-  
+}    
   .come{
     height:665px;
     width:380px;
     background-color:ghostwhite;
-    color:black;
-    
+    color:black;    
   }
   .bold{
     width:270px;
     height:80px;
     margin:5px;
-  }
-  
+  }  
   .head{
     border:2px solid #9C3EA5;
     font-size:22px;
@@ -355,15 +288,13 @@ a {
   }
   .pic{
     height:;
-  }
-  
+  }  
   .picture{
     height:300px;
     width:340px;
-    margin:20px;
-    
+    margin:20px;    
   }
-.length{
+.len{
  height: calc(100vh - 80px);
- width:100vw;
+ width:100vw; 
 }
