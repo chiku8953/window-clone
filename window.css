@@ -15,7 +15,7 @@ body{
   flex-direction: column;
   margin:0;
   padding:0;
-  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* We don't want any links to be underlined. Let's remove that globally */
