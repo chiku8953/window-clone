@@ -1,5 +1,4 @@
   *{
-
   padding:0;
   margin: 0;
   text-decoration: none;
@@ -366,5 +365,6 @@ a {
     
   }
 .length{
- height:(100vh-80px;
+ height:calc(100vh-80px);
  width:100vw;
+}
