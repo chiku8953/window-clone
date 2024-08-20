@@ -1,302 +1,287 @@
-  *{
-  padding:0;
+/* General Reset */
+* {
+  padding: 0;
   margin: 0;
-  box-sizing:border-box;
-  text-decoration: none;
-  list-style: none;
   box-sizing: border-box;
-  color:#cccccc; 
 }
-body{
-  font-family:verdana;
-  background-color:#0d0d0d;
-  margin:0;
-  padding:0;
-  overflow-y: auto;
- overflow-x:hidden;
+
+/* Body and HTML Styles */
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  background: url('https://static.miraheze.org/windowswallpaperwiki/5/50/Img0_%28Windows_7%29.jpg') center/cover no-repeat;
 }
-/* We don't want any links to be underlined. Let's remove that globally */
+
+/* Main Window */
+.main-window {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Tab Navigation Menu */
+.tab-navigation-menu {
+  text-align: right;
+  background-color: #e0e0e0;
+  width: 95px;
+  margin-left: auto;
+  margin-right: 4px;
+  border-radius: 4px 4px 0 0;
+}
+
+.tab-navigation-menu > span {
+  padding: 5px;
+  margin: 1px;
+}
+
+/* Arrow */
+.arrow {
+  background-color: #e0e0e0;
+  text-align: left;
+  height: 35px;
+}
+
+.arrow > span {
+  background-color: #5E65B0;
+  color: white;
+  border-radius: 50%;
+  padding: 3px;
+  font-size: 25px;
+  margin: 3px;
+}
+
+/* Gallery and Desktop Folder */
+.gallery {
+  display: flex;
+}
+
+.desktop-folder {
+  margin: 15px 8px 0 12px;
+}
+
+.desktop-picture, .desktop-picture2 {
+  height: 54px;
+  width: 50px;
+}
+
+.desktop-picture2 {
+  margin: 8px;
+  padding: 1px;
+}
+
+.name {
+  margin-top: 3px;
+  font-size: 15px;
+}
+
+/* Taskbar */
+.taskbar {
+  background-color: #262626;
+  color: white;
+  height: 40px;
+}
+
+/* Container */
+.contener {
+  height: 100%;
+  width: 300px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #fff;
+}
+
+/* Dialog Box Hover Effect */
+#g:hover > div {
+  display: block;
+}
+
+#g > div {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 50%;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  z-index: 20;
+  bottom: 40px;
+  left: 10px;
+}
+
+/* Left and Right Sections */
+.left, .right {
+  width: 50%;
+  padding: 0 10px;
+}
+
+.right {
+  text-align: left;
+  display: flex;
+}
+
+.left {
+  text-align: left;
+  display: flex;
+}
+
+.vertical-line {
+  border-left: 1px solid #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  height: 100%;
+}
+
+/* File and Person Images */
+.file-image {
+  height: 20px;
+  width: 22px;
+  margin-right: 10px;
+}
+
+.person-image {
+  height: 80px;
+  width: 80px;
+  margin: 20px;
+  padding: 10px;
+  border: 4px solid white;
+  text-align: center;
+  border-radius: 20px;
+  border-left: 5px solid goldenrod;
+  border-top: 5px solid goldenrod;
+  border-bottom: 5px solid palegoldenrod;
+  border-right: 5px solid palegoldenrod;
+}
+
+/* Content Folder */
+.content-folder {
+  display: flex;
+  flex-direction: column;
+}
+
+.folder {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+/* Dialog Box Hover Effect */
+#dialog-box:hover > .h {
+  display: block;
+}
+
+#dialog-box > .h {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  bottom: 40px;
+  right: 20px;
+  height: 60px;
+  width: 110px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  padding: 10px;
+}
+
+/* Clock Time */
+#clock-time {
+  float: right;
+  margin: 10px;
+}
+
+/* New Page */
+.new-page {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 2px solid #fff;
+  background-color: #e6e6e6;
+}
+
+.left1, .right1 {
+  width: 50px;
+  padding: 0 10px;
+}
+
+.right-first-page {
+  text-align: left;
+  width: 70%;
+  display: flex;
+}
+
+.left-first-page {
+  text-align: left;
+  width: 30%;
+  display: flex;
+}
+
+.vertical-line-first {
+  border-left: 1px solid #fff;
+  color: #cccccc;
+  height: 100%;
+}
+
+.file-image1 {
+  height: 25px;
+  width: 26px;
+}
+
+.hd-image {
+  height: 80px;
+  width: 85px;
+}
+
+.box {
+  height: 20px;
+  width: 170px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: dodgerblue;
+}
+
+/* Anchor Styles */
 a {
   text-decoration: none;
+  color: black;
 }
-.navbar {
-  background-color:#B3E5FC;
-  display: flex;
-  border-radius: px;
-  /* let's align the items so everything is nice and centered */
-  align-items: center;
-  height:40px;  
-}
-/* We want all links in the navbar to be #e7e7e7 */
-.navbar a {
-  color: #e7e7e7;
-  font-size:16px;
-}
-.navbar ul {
- /* Let's reset the margin and padding of the list so it's is flush. */
-  margin: 0;
-  padding: 0;
-  /* Let's remove the bullet points */
-  list-style-type: none;
-  /* display the list flex and align the items centered */
-  display: flex;
-  align-items:center;
-}
-.navbar .brand {
-  /*Let's make the anchor display block.
-     This will ensure when we get the full width of the container.
-  */
-  display: block;
-  color: ghostwhite;
- /* Remove padding from top/bottom and add 24px padding right/left */
-  padding: 0 px;
-  font-size:20px;
-  margin:0;
-}
-.navbar ul li a {
-  color: #e7e7e7;
-  padding: 0px;
-  
-  /*Let's make the anchor display block.
-     This will ensure when we hover, focus, or is active we get the full width and height 
-      of the container.
-  */
-  display: block;
-}
-/* When a user hovers, focuses or if the link is active change the background */
-.navbar ul a:hover,
-.navbar ul a:focus,
-.navbar ul .active {
-  background-color: #272727;
-}
-        .container {
-            position: relative;
-            display: inline-block;
-            text-align: center;
-            width:100vw;           
 
-        }
-        .image {
-            display: block;
-            width:100vw;
-            height:100vh;
-        }
-        .chrome {
-            position: absolute;
-            top: 50px;
-            left: 50px;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            
-        }             
-                .internet {
-            position: absolute;
-            top:50px;
-            left:150px;              
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 24px;
-            font-weight: bold;            
-        }
-        
-             .youtube {
-            position: absolute;
-            top:150px;
-            left: 50px;     
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            
-        }                        
-                .file {
-            position: absolute;
-            top:250px;
-            left: 50px;                        
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 24px;
-            font-weight: bold;            
-        }                        
-              .rc{
-            position: absolute;
-            top:150px;
-            left: 150px;                     
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 24px;
-            font-weight: bold;            
-        }               
-        .excel {
-            position: absolute;
-            top:250px;
-            left: 150px;                        
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 24px;
-            font-weight: bold;            
-        }                        
-                .chatgpt {
-            position: absolute;
-            top:350px;
-            left: 50px;                      
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 24px;
-            font-weight: bold;            
-        }      
-                .notpad {
-            position: absolute;
-            top:30px;
-            left: 30px;          
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 24px;
-            font-weight: bold;            
-        }
-              .notpad {
-            position: absolute;
-            top:350px;
-            left:150px;
-            bottom:px;            
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 24px;
-            font-weight: bold;            
-        }        
-              .typing {
-            position: absolute;
-            top:450px;
-            left: 50px;
-            bottom:px;            
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 24px;
-            font-weight: bold;            
-        }        
-                .github {
-            position: absolute;
-            top:450px;
-            left: 150px;                      
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 24px;
-            font-weight: bold;            
-        }        
-        .g{
-          text-align:left;
-          margin:60px;
-        }        
-        .taskbar{
-          padding:0;
-          margin:0;
-          width:100%;
-          background-color:blue;
-          height:30px;                              
-        }        
-        .img{
-          height:37px;
-          width:37px;
-          text-align:left; 
-          margin:2px;                    
-        }
-        .logo{          
-          text-align:left;                              
-        }
-        .img2{
-          height:20px;
-          width:20px;
-          text-align:right;
-        }        
-        .uper{
-          height:40px;
-          width:155px;
-          text-align:right;                    
-        }                        
-       .home{         
-         margin:0;
-         padding:0;         
-       } 
-       .h{
-         text-align:right;
-         margin:4px         
-       }
-       .hg{
-         border:px solid ;
-         margin:30px;
-       }
-        .img3{
-          height:65px;
-          width:65px;
-          margin:10px;
-          text-align: uper left;          
-        }
-        #clock-time{
-          text-align:right;
-          color:black;
-          margin:2px;
-        }
-               .space{
-         height:100px;
-         
-       }   
-   .start{
-     border:1px solid white;     
-     height:1100px;
-     width:330px;     
-     background-color:white;
-     color:black;
-   }
-   .line{
-     color:black;
-     align-items:center;
-     font-size:40px;
-   }   
-     .flex{
-    display:flex;
-    width:48px;
-    margin:8px;
-    padding:5px;
-    border:1px solid white;
-    border-radius:5px;   
-     }           
- .t{
-  height:40px;
-  background-color:#B3E5FC;
-  text-align: right;
-}    
-  .come{
-    height:665px;
-    width:380px;
-    background-color:ghostwhite;
-    color:black;    
-  }
-  .bold{
-    width:270px;
-    height:80px;
-    margin:5px;
-  }  
-  .head{
-    border:2px solid #9C3EA5;
-    font-size:22px;
-    height:50px;
-    text-align:center;
-    margin:2px;
-    padding:10px;
-  background-color:black;
-  color:white;
-  }
-  .pic{
-    height:;
-  }  
-  .picture{
-    height:300px;
-    width:340px;
-    margin:20px;    
-  }
-.len{
- height: calc(100vh - 80px);
- width:100vw; 
+/* Bottom Part */
+.bottom-part {
+  margin-top: 200px;
+  border: 1px solid black;
 }
+
+/* Video Section */
+#video {
+  overflow-y: hidden;
+}
+
+#video:hover > .vid {
+  display: block;
+}
+
+#video > .vid {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 66px;
+  left: 0;
+  bottom: 60px;
+  float: left;
+  height: 86%;
+  width: 100%;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+ }
