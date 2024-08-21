@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Image Slider</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .slider {
+            width: 100%;
+            height: 60%;
+            position: relative;
+            overflow: hidden;
+            border: 0px solid #333;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: auto;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <img src="https://raw.githubusercontent.com/chiku8953/window-clone/main/IMG-20240815-WA0008.jpg" alt="Image 1" class="slide">
+            <img src="https://raw.githubusercontent.com/chiku8953/window-clone/main/20240802_183318.jpg" alt="Image 2" class="slide">
+            <img src="https://raw.githubusercontent.com/chiku8953/window-clone/main/IMG-20240727-WA0006.jpg" alt="Image 3" class="slide">
+            
+            <img src="https://raw.githubusercontent.com/chiku8953/window-clone/main/IMG20240711170025.jpg" alt="Image 4" class="slide">
+            <img src="https://raw.githubusercontent.com/chiku8953/window-clone/main/IMG20240711223059.jpg" alt="Image 5" class="slide">
+            <img src="https://raw.githubusercontent.com/chiku8953/window-clone/main/IMG20240711170507.jpg" alt="Image 6" class="slide">
+            <img src="https://raw.githubusercontent.com/chiku8953/window-clone/main/download%20(1).png" alt="Image 7" class="slide">
+            <img src="https://raw.githubusercontent.com/chiku8953/window-clone/main/IMG-20240815-WA0008.jpg" alt="Image 8" class="slide">
+            <img src="https://raw.githubusercontent.com/chiku8953/window-clone/main/IMG-20240815-WA0008.jpg" alt="Image 9" class="slide">
+            <img src="https://raw.githubusercontent.com/chiku8953/window-clone/main/download%20(1).png" alt="Image 10" class="slide">
+            <!-- Add more images as needed -->
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <script>
+        let slideIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            if (index >= totalSlides) {
+                slideIndex = 0;
+            } else if (index < 0) {
+                slideIndex = totalSlides - 1;
+            } else {
+                slideIndex = index;
+            }
+            slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(slideIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(slideIndex - 1);
+        }
+
+        showSlide(slideIndex); // Initial display
+    </script>
+    <script src="script.js"></script>
+</body>
+  </html>
